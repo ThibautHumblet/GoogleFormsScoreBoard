@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type='text/javascript'>    
+      var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1k0TiLGyh7XRJ9b73CbOR1ul59wldiAJb-e4GydYCewM/edit?usp=sharing';
+    
+      function init() {
+        Tabletop.init( { key: publicSpreadsheetUrl,
+                         callback: showInfo,
+                         simpleSheet: true } )
+      }
+
+      function showInfo(data, tabletop) {
+        var tr;
+        for (var i = 0; i < data.length; i++) {
+            tr = $('<tr/>');
+            tr.append("<td>" + data[i].Naam + "</td>");
+            tr.append("<td>" + data[i].Score + "</td>");
+            $('table').append(tr);
+        }
+        console.log(data);
+    }
+    
+      window.addEventListener('DOMContentLoaded', init)
+    </script>
+    <title>Scoreboard</title>
+</head>
+<body>
+    <h1>Scoreboard Helemaal Hasselt</h1>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Naam speler</th>
+                    <th>Aantal punten</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</body>
+</html>

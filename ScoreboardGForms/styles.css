@@ -1,0 +1,37 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
+    background-color: #ffffff;
+  }
+  
+  table {
+    border: 1px solid #111111;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  table tr {
+    background-color: #dcdcdc;
+    border: 1px solid #ffffff;
+    padding: .35em;
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
